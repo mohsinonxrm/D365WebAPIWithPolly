@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D365WebAPIWithPolly", "D365WebAPIWithPolly\D365WebAPIWithPolly.csproj", "{6A6EA93F-EE1B-48A3-AE31-DD282B757426}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A6EA93F-EE1B-48A3-AE31-DD282B757426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6EA93F-EE1B-48A3-AE31-DD282B757426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6EA93F-EE1B-48A3-AE31-DD282B757426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6EA93F-EE1B-48A3-AE31-DD282B757426}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5A0C866-0C56-4D1A-BA89-1F6DC83A3920}
+	EndGlobalSection
+EndGlobal
