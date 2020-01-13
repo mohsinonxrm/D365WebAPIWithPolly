@@ -90,20 +90,20 @@ namespace D365WebAPIWithPolly
                     // However, if Retry-After is provided then that will be used instead
                     IAsyncPolicy<HttpResponseMessage> waitAndRetryPolicy = HttpPolicyExtensions
                                   .HandleTransientHttpError() // HttpRequestException, 5XX and 408
-                                  .OrResult(response => (int)response.StatusCode == 429) // RetryAfter
+                                  .OrResult(response => (int)response.StatusCode == 429) // Retry-After
                                   .WaitAndRetryAsync(
                                     retryCount: 3,
                                     sleepDurationProvider: (retryAttempt, context) =>
                                     {
                                         var retryAfter = TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)); //default exponential backoff
 
-                                        if (context == null || !context.ContainsKey("RetryAfter"))
+                                        if (context == null || !context.ContainsKey("Retry-After"))
                                         {
                                             return retryAfter;
                                         }
                                         else
                                         {
-                                            return TimeSpan.FromSeconds(Convert.ToInt32(context["RetryAfter"]));
+                                            return TimeSpan.FromSeconds(Convert.ToInt32(context["Retry-After"]));
                                         }
                                     },
                                     onRetryAsync: (exception, timespan, retryAttempt, context) =>
